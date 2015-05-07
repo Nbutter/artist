@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :exhibitions
-  resources :venues
-  resources :artworks
+  # Default all views except /admin to JSON 
+  resources :users, defaults: { format: :json }
+  resources :exhibitions, defaults: { format: :json }
+  resources :venues, defaults: { format: :json }
+  resources :artworks, defaults: { format: :json }
+
+  
+  # Admin views rendered with ERB as HTML
+  namespace :admin, defaults: {format: :html} do
+    resources :users  
+    resources :exhibitions
+    resources :venues
+    resources :artworks
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
