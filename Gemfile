@@ -38,6 +38,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'cloudinary'
 
+# Use b-crypt for has_secure_password
+gem 'bcrypt'
+
 
 group :development, :test do
 
