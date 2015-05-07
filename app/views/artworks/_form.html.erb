@@ -1,0 +1,49 @@
+<%= form_for(@artwork) do |f| %>
+  <% if @artwork.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
+
+      <ul>
+      <% @artwork.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :year_started %><br>
+    <%= f.number_field :year_started %>
+  </div>
+  <div class="field">
+    <%= f.label :year_completed %><br>
+    <%= f.number_field :year_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :exhibition_id %><br>
+    <%= f.number_field :exhibition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mediums %><br>
+    <%= f.text_field :mediums %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br>
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :depth %><br>
+    <%= f.number_field :depth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

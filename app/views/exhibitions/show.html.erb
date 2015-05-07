@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @exhibition.venue_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @exhibition.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @exhibition.subtitle %>
+</p>
+
+<p>
+  <strong>Exhibition type:</strong>
+  <%= @exhibition.exhibition_type %>
+</p>
+
+<p>
+  <strong>Press url:</strong>
+  <%= @exhibition.press_url %>
+</p>
+
+<p>
+  <strong>Curator:</strong>
+  <%= @exhibition.curator %>
+</p>
+
+<p>
+  <strong>Start month:</strong>
+  <%= @exhibition.start_month %>
+</p>
+
+<p>
+  <strong>Finish month:</strong>
+  <%= @exhibition.finish_month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @exhibition.year %>
+</p>
+
+<p>
+  <strong>Exhibition image url:</strong>
+  <%= @exhibition.exhibition_image_url %>
+</p>
+
+<p>
+  <strong>Exhibition image url2:</strong>
+  <%= @exhibition.exhibition_image_url2 %>
+</p>
+
+<%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
+<%= link_to 'Back', exhibitions_path %>

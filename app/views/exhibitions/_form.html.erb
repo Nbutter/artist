@@ -1,0 +1,61 @@
+<%= form_for(@exhibition) do |f| %>
+  <% if @exhibition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
+
+      <ul>
+      <% @exhibition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :venue_id %><br>
+    <%= f.number_field :venue_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :exhibition_type %><br>
+    <%= f.text_field :exhibition_type %>
+  </div>
+  <div class="field">
+    <%= f.label :press_url %><br>
+    <%= f.text_field :press_url %>
+  </div>
+  <div class="field">
+    <%= f.label :curator %><br>
+    <%= f.text_field :curator %>
+  </div>
+  <div class="field">
+    <%= f.label :start_month %><br>
+    <%= f.text_field :start_month %>
+  </div>
+  <div class="field">
+    <%= f.label :finish_month %><br>
+    <%= f.text_field :finish_month %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :exhibition_image_url %><br>
+    <%= f.text_field :exhibition_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :exhibition_image_url2 %><br>
+    <%= f.text_field :exhibition_image_url2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
