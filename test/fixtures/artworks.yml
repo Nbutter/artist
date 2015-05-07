@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year_started: 1
+  year_completed: 1
+  exhibition_id: 1
+  mediums: MyString
+  height: 1
+  width: 1
+  depth: 1
+
+two:
+  title: MyString
+  year_started: 1
+  year_completed: 1
+  exhibition_id: 1
+  mediums: MyString
+  height: 1
+  width: 1
+  depth: 1

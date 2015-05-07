@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue_id: 1
+  title: MyString
+  subtitle: MyString
+  exhibition_type: MyString
+  press_url: MyString
+  curator: MyString
+  start_month: MyString
+  finish_month: MyString
+  year: 1
+  exhibition_image_url: MyString
+  exhibition_image_url2: MyString
+
+two:
+  venue_id: 1
+  title: MyString
+  subtitle: MyString
+  exhibition_type: MyString
+  press_url: MyString
+  curator: MyString
+  start_month: MyString
+  finish_month: MyString
+  year: 1
+  exhibition_image_url: MyString
+  exhibition_image_url2: MyString
