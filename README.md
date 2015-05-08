@@ -15,7 +15,7 @@ Demo using the artist Ruth Root's work: http://ruthroot.herokuapp.com
 
 ##Configuration & Deployment
 
-The artist's name is stored in an "artist.yml" file which is loaded by the "artist_info.rb" initializer.  Image repository access is managed directly in Backbone. All other data is handled through normal ActiveRecord models.  
+The artist's name is stored in an "artist.yml" file which is loaded by the "artist_info.rb" initializer.  Image repository access by the front-end is managed directly in Backbone. All other data is handled through normal ActiveRecord models.  
 
 The following steps have been tested:
 
