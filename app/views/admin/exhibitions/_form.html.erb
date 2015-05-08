@@ -1,4 +1,4 @@
-<%= form_for(@exhibition,, url: admin_exhibitions_path) do |f| %>
+<%= form_for(@exhibition, url: admin_exhibitions_path) do |f| %>
   <% if @exhibition.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
