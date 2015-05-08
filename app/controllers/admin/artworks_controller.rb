@@ -29,7 +29,7 @@ module Admin
   
       respond_to do |format|
         if @artwork.save
-          format.html { redirect_to @artwork, notice: 'Artwork was successfully created.' }
+          format.html { redirect_to admin_artworks_path, notice: 'Artwork was successfully created.' }
           format.json { render :show, status: :created, location: @artwork }
         else
           format.html { render :new }
@@ -43,7 +43,7 @@ module Admin
     def update
       respond_to do |format|
         if @artwork.update(artwork_params)
-          format.html { redirect_to @artwork, notice: 'Artwork was successfully updated.' }
+          format.html { redirect_to admin_artworks_path, notice: 'Artwork was successfully updated.' }
           format.json { render :show, status: :ok, location: @artwork }
         else
           format.html { render :edit }
