@@ -26,7 +26,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+# Run tests with RSPEC
+gem 'rspec'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -37,10 +40,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Upload images to Cloudinary using Carrierwave
 gem 'carrierwave'
 gem 'cloudinary'
-
-# Use b-crypt for has_secure_password
-gem 'bcrypt'
-
 
 group :development, :test do
 
