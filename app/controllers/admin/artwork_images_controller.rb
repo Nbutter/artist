@@ -1,4 +1,4 @@
-module Admin 
+ module Admin 
   class ArtworkImagesController < ApplicationController
     before_action :set_artwork, only: [:show, :edit, :update, :destroy]
   
@@ -70,7 +70,7 @@ module Admin
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def artwork_params
-        params.require(:artwork_image).permit(:title, :year_started, :year_completed, :exhibition_id, :mediums, :height, :width, :depth)
+        params.require(:artwork_image).permit(:description, :shot_type, :artwork_id, :image_url)
       end
   end
 end
