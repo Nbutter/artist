@@ -21,10 +21,10 @@
         <td><%= image.description %></td>
         <td><%= image.shot_type %></td>
         <td><%= image.artwork_id %></td>
-        <td><%= image.image_url %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_admin_artwork_path(image) %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to image.image_url, image.image_url if image.image_url %></td>
+        <td><%= link_to 'Show', admin_artwork_image_path(image) %></td>
+        <td><%= link_to 'Edit', edit_admin_artwork_image_path(image) %></td>
+        <td><%= link_to 'Destroy', admin_artwork_image_path(image), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

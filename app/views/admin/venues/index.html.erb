@@ -21,9 +21,9 @@
         <td><%= venue.name %></td>
         <td><%= venue.city %></td>
         <td><%= venue.country %></td>
-        <td><%= venue.website_url %></td>
-        <td><%= venue.image_url %></td>
-        <td><%= venue.image_url2 %></td>
+        <td><%= link_to venue.website_url, venue.website_url if venue.website_url  %></td>
+        <td><%= link_to venue.image_url, venue.image_url if venue.image_url %></td>
+        <td><%= link_to venue.image_url2, venue.image_url2 if venue.image_url2 %></td>
         <td><%= link_to 'Show', venue %></td>
         <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
         <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Venue', new_venue_path %>
+<%= link_to 'New Venue', new_admin_venue_path %>

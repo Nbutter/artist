@@ -29,7 +29,7 @@ module Admin
 
     respond_to do |format|
       if @exhibition.save
-        format.html { redirect_to @exhibition, notice: 'Exhibition was successfully created.' }
+        format.html { redirect_to admin_exhibitions_path, notice: 'Exhibition was successfully created.' }
         format.json { render :show, status: :created, location: @exhibition }
       else
         format.html { render :new }

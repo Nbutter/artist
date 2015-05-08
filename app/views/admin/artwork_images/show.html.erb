@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artwork ID:</strong>
+  <%= @artwork_image.artwork_id %>
+</p>
+
+<p>
+  <strong>Image URL:</strong>
+  <%= @artwork_image.image_url %>
+</p>
+
+<img src="<%=@artwork_image.image_url%>">
+
+
+<%= link_to 'Edit', edit_admin_artwork_image_path(@artwork_image) %> |
+<%= link_to 'Back', admin_artwork_images_path %>

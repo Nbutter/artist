@@ -1,6 +1,6 @@
  module Admin 
   class ArtworkImagesController < ApplicationController
-    before_action :set_artwork, only: [:show, :edit, :update, :destroy]
+    before_action :set_artwork_image, only: [:show, :edit, :update, :destroy]
   
     # GET /artwork_images
     # GET /artwork_images.json
@@ -15,7 +15,7 @@
   
     # GET /artwork_images/new
     def new
-      @artwork = ArtworkImage.new
+      @artwork_image = ArtworkImage.new
     end
   
     # GET /artwork_images/1/edit
@@ -25,11 +25,11 @@
     # POST /artwork_images
     # POST /artwork_images.json
     def create
-      @artwork = ArtworkImage.new(artwork_params)
+      @artwork_image = ArtworkImage.new(artwork_image_params)
   
       respond_to do |format|
-        if @artwork.save
-          format.html { redirect_to @artwork, notice: 'Artwork was successfully created.' }
+        if @artwork_image.save
+          format.html { redirect_to admin_artwork_images_path, notice: 'Artwork was successfully created.' }
           format.json { render :show, status: :created, location: @artwork }
         else
           format.html { render :new }
@@ -55,7 +55,7 @@
     # DELETE /artwork_images/1
     # DELETE /artwork_images/1.json
     def destroy
-      @artwork.destroy
+      @artwork_image.destroy
       respond_to do |format|
         format.html { redirect_to artwork_images_url, notice: 'Artwork was successfully destroyed.' }
         format.json { head :no_content }
@@ -64,12 +64,12 @@
   
     private
       # Use callbacks to share common setup or constraints between actions.
-      def set_artwork
-        @artwork = ArtworkImage.find(params[:id])
+      def set_artwork_image
+        @artwork_image = ArtworkImage.find(params[:id])
       end
   
       # Never trust parameters from the scary internet, only allow the white list through.
-      def artwork_params
+      def artwork_image_params
         params.require(:artwork_image).permit(:description, :shot_type, :artwork_id, :image_url)
       end
   end
