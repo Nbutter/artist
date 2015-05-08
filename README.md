@@ -5,19 +5,21 @@ Final project for General Assembly's Web Development Immersive program, McClane 
 
 This app allows an admin to publish a website for an artist. 
 
-The server is built in Rails 4, using a Postgres database.  Admin interface is provided via Rails templated pages.  Images are uploaded with Paperclip and stored on S3.  The server delivers all end-user-facing data via a RESTful JSON API. 
+The server is built in Rails 4, using a Postgres database.  Admin interface is provided via Rails templated pages.  The server delivers all end-user-facing data via a RESTful JSON API. 
 
-The frontend is built with Backbone.js, using typical Backbone conventions for models, collections and views.  A Backbone router uses Pushstate to generate browser history.    
+The frontend is built with Backbone.js, using typical Backbone conventions for models, collections and views.  A Backbone router uses Pushstate to generate browser history. Images are stored externally and accessed directly by the front-end.
 
 ##Demo
 
 Demo using the artist Ruth Root's work: http://ruthroot.herokuapp.com
 
-##Deployment
+##Configuration & Deployment
+
+The artist's name is stored in an "artist.yml" file which is loaded by the "artist_info.rb" initializer.  Image repository access is managed directly in Backbone. All other data is handled through normal ActiveRecord models.  
 
 The following steps have been tested:
 
-1. Set up S3 bucket
+1. Set up Cloudinary account
 2. Deploy to Heroku
 3. Attach Postgresql db to Heroku instance
 4. Add S3 credentials & Postgresql 'color' to Heroku config
