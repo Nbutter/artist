@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root to: 'home#index'
   # Default all views except /admin to JSON 
   #resources :users, defaults: { format: :json }
   resources :exhibitions, defaults: { format: :json }

@@ -41,6 +41,9 @@ gem 'rspec'
 gem 'carrierwave'
 gem 'cloudinary'
 
+# Use Backbone JS and the Rails asset pipeline with Backbars
+gem 'backbars'
+
 group :development, :test do
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,3 +62,5 @@ end
 
 #use pry for console
 gem 'pry-rails'
+gem 'rails-assets-underscore', source: 'https://rails-assets.org'
+gem 'rails-assets-backbone', source: 'https://rails-assets.org'
