@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artwork Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Description</th>
+      <th>Shot Type</th>
+      <th>Artwork Id</th>
+      <th>Image URL</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artwork_images.each do |image| %>
+      <tr>
+        <td><%= image.id %></td>
+        <td><%= image.description %></td>
+        <td><%= image.shot_type %></td>
+        <td><%= image.artwork_id %></td>
+        <td><%= image.image_url %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_admin_artwork_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artwork Image', new_admin_artwork_image_path %>
