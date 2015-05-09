@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   
   root to: 'home#index'
-  # Default all views except /admin to JSON 
-  #resources :users, defaults: { format: :json }
-  resources :exhibitions, defaults: { format: :json }
-  resources :venues, defaults: { format: :json }
-  resources :artworks, defaults: { format: :json }
+  resources :exhibitions
+  resources :venues
+  resources :artworks
 
   #show login form
   get 'sessions/new' => 'sessions#new'
@@ -18,6 +16,7 @@ Rails.application.routes.draw do
 
   # Admin views rendered with ERB as HTML
   namespace :admin, defaults: {format: :html} do
+    root to: '/sessions#new'
     #resources :users 
     resources :exhibitions
     resources :venues
