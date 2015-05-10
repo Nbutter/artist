@@ -4,3 +4,4 @@ artist_config_info = YAML.load_file('config/artist.yml')
 
 Rails.configuration.x.artist.name = artist_config_info["artist"]["name"]
 Rails.configuration.x.artist.email = artist_config_info["artist"]["email"]
+Rails.configuration.x.artist.favicon = artist_config_info["artist"]["favicon"]

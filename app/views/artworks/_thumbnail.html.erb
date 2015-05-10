@@ -2,10 +2,12 @@
 
 	<% image_url = artwork.artwork_images.last.image_url %>
 
-	<div class="thumbnail" style="height:200px; width:200px; background-image:url(<%= image_url %>)"></div>
+	<a href="/artworks/<%= artwork.id%>">
+		<div class="thumbnail" style="height:200px; width:200px; background-image:url(<%= image_url %>)"></div>
+	</a>
 
 <% else %>
-	
-	<div class="thumbnail"></div>
-
+	<a href="/artworks/<%= artwork.id%>">
+		<div class="thumbnail"></div>
+	</a>
 <% end %>	
