@@ -1,47 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exhibitions</h1>
+<h1>Exhibitions</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Venue</th>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Exhibition type</th>
-      <th>Press url</th>
-      <th>Curator</th>
-      <th>Start month</th>
-      <th>Finish month</th>
-      <th>Year</th>
-      <th>Exhibition image url</th>
-      <th>Exhibition image url2</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @exhibitions.each do |exhibition| %>
+    <%= render partial: "listing", locals: {exhibition: exhibition} %>
+  <% end %> 
 
-  <tbody>
-    <% @exhibitions.each do |exhibition| %>
-      <tr>
-        <td><%= exhibition.venue_id %></td>
-        <td><%= exhibition.title %></td>
-        <td><%= exhibition.subtitle %></td>
-        <td><%= exhibition.exhibition_type %></td>
-        <td><%= exhibition.press_url %></td>
-        <td><%= exhibition.curator %></td>
-        <td><%= exhibition.start_month %></td>
-        <td><%= exhibition.finish_month %></td>
-        <td><%= exhibition.year %></td>
-        <td><%= exhibition.exhibition_image_url %></td>
-        <td><%= exhibition.exhibition_image_url2 %></td>
-        <td><%= link_to 'Show', exhibition %></td>
-        <td><%= link_to 'Edit', edit_exhibition_path(exhibition) %></td>
-        <td><%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Exhibition', new_exhibition_path %>
