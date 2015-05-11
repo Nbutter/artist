@@ -1,3 +1,5 @@
-<% @artworks.each do |artwork| %>
-  <%= render partial: "thumbnail", locals: {artwork: artwork} %>
-<% end %> 
+<ol class="thumb-grid group">
+	<% @artworks.each do |artwork| %>
+  		<%= render partial: "thumbnail", locals: {artwork: artwork} %>
+	<% end %> 
+</ol>

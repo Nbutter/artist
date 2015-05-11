@@ -1,1 +1,9 @@
-<%= Rails.configuration.x.artist.name %> <%=link_to 'Work', artworks_path %> <%= link_to 'Exhibitions', exhibitions_path %> 
+<header>
+	<div id="top-nav">
+	<span id="artist-name" class="serif"><%= link_to Rails.configuration.x.artist.name, root_path %></span> 
+	<span id="right-top-links" class="sans">
+		<span id="work-link"><%=link_to 'Work', artworks_path %></span>
+		<span id="exhibitions-link"> <%= link_to 'Exhibitions', exhibitions_path %></span>
+	</span>
+</div>
+</header>

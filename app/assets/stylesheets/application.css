@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	font-family: Georgia, serif;
+}
+
+.serif {
+	font-family: 'Arvo', serif;
+}
+
+.sans {
+	font-family: 'Cabin', sans-serif;
+}
