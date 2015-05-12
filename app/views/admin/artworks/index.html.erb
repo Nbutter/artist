@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Artworks</h1>
+<h1>Listing Work</h1>
 
 <table>
   <thead>
@@ -9,7 +9,7 @@
       <th>Year started</th>
       <th>Year completed</th>
       <th>Exhibition</th>
-      <th>Mediums</th>
+      <th>Media</th>
       <th>Height</th>
       <th>Width</th>
       <th>Depth</th>
@@ -28,9 +28,9 @@
         <td><%= artwork.height %></td>
         <td><%= artwork.width %></td>
         <td><%= artwork.depth %></td>
-        <td><%= link_to 'Show', artwork %></td>
+        <td><%= link_to 'Details', admin_artwork_path(artwork) %></td>
         <td><%= link_to 'Edit', edit_admin_artwork_path(artwork) %></td>
-        <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
