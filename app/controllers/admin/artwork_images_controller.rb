@@ -24,8 +24,9 @@
   
     # POST /artwork_images
     # POST /artwork_images.json
-    def create
-      @artwork_image = ArtworkImage.new(artwork_image_params)
+    def create(artwork)
+      artwork_id = artwork.id
+      @artwork_image = ArtworkImage.new(artwork_id: artwork_id)
   
       respond_to do |format|
         if @artwork_image.save
@@ -42,8 +43,8 @@
     # PATCH/PUT /artwork_images/1.json
     def update
       respond_to do |format|
-        if @artwork.update(artwork_params)
-          format.html { redirect_to @artwork, notice: 'Artwork was successfully updated.' }
+        if @artwork_image.update(artwork_image_params)
+          format.html { redirect_to @artwork_image, notice: 'Artwork Image was successfully updated.' }
           format.json { render :show, status: :ok, location: @artwork }
         else
           format.html { render :edit }
@@ -57,7 +58,7 @@
     def destroy
       @artwork_image.destroy
       respond_to do |format|
-        format.html { redirect_to artwork_images_url, notice: 'Artwork was successfully destroyed.' }
+        format.html { redirect_to admin_artwork_images_url, notice: 'Artwork was successfully destroyed.' }
         format.json { head :no_content }
       end
     end

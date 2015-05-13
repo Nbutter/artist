@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= f.hidden_field(:artwork, :id) %>
 
   <div class="field">
     <%= f.label :description %><br>
@@ -19,14 +21,12 @@
     <%= f.label :shot_type %><br>
     <%= f.text_field :shot_type %>
   </div>
-  <div class="field">
-    <%= f.label :artwork_id %><br>
-    <%= f.number_field :artwork_id %>
-  </div>
+
   <div class="field">
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
