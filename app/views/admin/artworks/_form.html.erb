@@ -1,3 +1,5 @@
+<%= link_to 'ADD AN IMAGE FOR THIS ARTWORK', new_admin_artwork_image_path(artwork_id: @artwork.id) %>
+
 <%= form_for(@artwork, url: admin_artwork_path) do |f| %>
   <% if @artwork.errors.any? %>
     <div id="error_explanation">
@@ -45,4 +47,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>

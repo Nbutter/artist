@@ -11,8 +11,8 @@
     </div>
   <% end %>
   
-  <%= f.hidden_field(:artwork, :id) %>
-
+  <%= f.hidden_field :artwork_id  %>
+  <h2>THE ARTWORK ID FOR THIS IMAGE IS <%=@artwork_image.artwork_id%></h2>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>

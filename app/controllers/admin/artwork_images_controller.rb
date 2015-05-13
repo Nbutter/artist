@@ -15,7 +15,7 @@
   
     # GET /artwork_images/new
     def new
-      @artwork_image = ArtworkImage.new
+      @artwork_image = ArtworkImage.new(artwork_id: params[:artwork_id])
     end
   
     # GET /artwork_images/1/edit
@@ -24,9 +24,8 @@
   
     # POST /artwork_images
     # POST /artwork_images.json
-    def create(artwork)
-      artwork_id = artwork.id
-      @artwork_image = ArtworkImage.new(artwork_id: artwork_id)
+    def create()
+      @artwork_image = ArtworkImage.new(artwork_image_params)
   
       respond_to do |format|
         if @artwork_image.save
