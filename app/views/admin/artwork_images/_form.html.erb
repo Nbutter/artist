@@ -12,7 +12,8 @@
   <% end %>
   
   <%= f.hidden_field :artwork_id  %>
-  <h2>THE ARTWORK ID FOR THIS IMAGE IS <%=@artwork_image.artwork_id%></h2>
+  <h2>ADD IMAGE FOR <%=Artwork.find(@artwork_image.artwork_id).title%></h2>
+  <br>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
