@@ -1,3 +1,5 @@
 <div id="home-main">
+	<% if ArtworkImage.last.image_url %>
 	<%= image_tag ArtworkImage.last.image_url %>
+	<% end %>
 </div>
