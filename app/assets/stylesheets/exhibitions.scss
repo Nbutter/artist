@@ -1,3 +1,28 @@
 // Place all the styles related to the Exhibitions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.exhibitions-container {
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	text-align: center;
+	padding-right: 20px
+}
+
+.exhibition-title {
+	font-size: 2em;
+	line-height: 2em;
+}
+
+.exhibition-subtitle {
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+.exhibition-detail{
+	margin-top: 10px;
+}
+
+.exhibition-listing {
+	margin-bottom: 30px;
+}

@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Exhibitions</h1>
+<div class="exhibitions-container">
+	<h1 class='serif'>Exhibitions</h1>
 
   <% @exhibitions.each do |exhibition| %>
     <%= render partial: "listing", locals: {exhibition: exhibition} %>
   <% end %> 
+ </div>
 

@@ -16,6 +16,28 @@
 
 body {
 	font-family: Georgia, serif;
+	text-decoration: none;
+	max-width: 1000px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#artist-name {
+	float: left;
+	font-size: 3em;
+}
+
+.right-align {
+	float: right;
+	padding-right: 100px;
+}
+
+.clearfix {
+	  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 30px;
 }
 
 .serif {
@@ -25,3 +47,6 @@ body {
 .sans {
 	font-family: 'Cabin', sans-serif;
 }
+
+
+

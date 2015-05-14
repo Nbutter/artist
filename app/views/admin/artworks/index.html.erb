@@ -7,7 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Year started</th>
-      <th>Year completed</th>
+      <th>Images</th>
       <th>Exhibition</th>
       <th>Media</th>
       <th>Height</th>
@@ -20,11 +20,11 @@
   <tbody>
     <% @artworks.each do |artwork| %>
       <tr>
-        <td><%= artwork.title %></td>
+        <td><%= truncate(artwork.title) %></td>
         <td><%= artwork.year_started %></td>
-        <td><%= artwork.year_completed %></td>
-        <td><%= artwork.exhibition_id %></td>
-        <td><%= artwork.mediums %></td>
+        <td><%= artwork.artwork_images_count || 0 %></td>
+        <td><%= truncate(Exhibition.find(artwork.exhibition_id).title) if artwork.exhibition_id %></td>
+        <td><%= truncate(artwork.mediums) %></td>
         <td><%= artwork.height %></td>
         <td><%= artwork.width %></td>
         <td><%= artwork.depth %></td>
